@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sports</title>
+<style>
+.container {
+            display: flex;
+            gap: 10px;
+            position: relative;
+        }
+
+ .game {
+            
+            transition: transform 0.3s ease, z-index 0s step-end;
+            position: relative;
+            z-index: 1;
+        }
+.game:hover {
+            transform: scale(1.5);
+            z-index: 10;
+        }
+
+#game1{
+  position: absolute;
+    top: 50px;
+    left: 350px;
+    width: 300px;
+}
+#game2{
+  position: absolute;
+    top: 400px;
+    left: 350px;
+    width: 300px;
+}
+#game3{
+  position: absolute;
+    top: 50px;
+    left: 800px;
+    width: 300px;
+}
+#game4{
+  position: absolute;
+    top: 400px;
+    left: 800px;
+    width: 300px;
+}
+.back-button {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body style="background-image: url('sp.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+<a href="https://www.crazygames.com/game/8-ball-billiards-classic">
+    <img src="sp1.png" alt="Clickable Image" class="game" id="game1">
+</a>
+<p style="position: absolute;
+    top: 250px;
+    left: 370px;
+    font-size:20px;
+    color: red;">8 BALL BILLIARDS CLASSIC</p>
+<a href="https://www.crazygames.com/game/cricket-superstar-league">
+    <img src="sp2.png" alt="Clickable Image" class="game" id="game2">
+</a>
+<p style="position: absolute;
+    top: 600px;
+    left: 360px;
+    font-size:20px;
+    color: red;">CRICKET SUPERSTAR LEAGUE</p>
+<a href="https://www.crazygames.com/game/tap-tap-shots">
+    <img src="sp3.png" alt="Clickable Image" class="game" id="game3">
+</a>
+<p style="position: absolute;
+    top: 230px;
+    left: 870px;
+    font-size:20px;
+    color: red;">BASKETBALL</p>
+<a href="https://www.crazygames.com/game/hill-climb-on-moto-bike">
+    <img src="sp4.png" alt="Clickable Image" class="game" id="game4"">
+</a>
+<p style="position: absolute;
+    top: 570px;
+    left: 820px;
+    font-size:20px;
+    color: red;">HILL CLIMB ON MOTO BIKE</p>
+<div/>
+<div style="position: relative; height: 100vh;">
+    <a href="javascript:history.back()">
+        <img src="bc.png" alt="Back" class="back-button">
+    </a>
+</div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Main page</title>
+<style>
+.link{
+position: relative;
+font-size: 20px;
+margin-left:200px;
+margin-top:70px;
+}
+
+.align{
+display:flex;
+}
+
+.link1{
+position:relative;
+margin-left:300px;
+margin-top:90px;
+color:white;
+font-size: 20px;
+}
+.align1{
+display:flex;
+}
+
+
+.link2{
+position:relative;
+margin-left: 280px;
+margin-top:70px;
+color:white;
+font-size: 20px;
+}
+ nav {
+            background-color: #333; 
+            padding: 10px;
+        }
+
+        ul {
+            list-style-type: none; 
+            padding: 0;
+            margin: 0;
+            display: flex; 
+        }
+
+        li {
+            margin-right: 1270px; 
+        }
+
+        li:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        a:hover {
+            background-color: #555; 
+            border-radius: 5px;
+        }
+        .sidebar {
+            width: 280px;
+            position: fixed;
+            left: -280px;
+            top: 0;
+            height: 100%;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            padding-top: 20px;
+            transition: 0.3s;
+            z-index: 1000;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .sidebar-toggle {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 1001;
+            background: #ff4b2b;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .open-sidebar {
+            left: 0;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 999;
+        }
+</style>
+</head>
+<body style="background-image: url('mbg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+<button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+<div class="sidebar" id="sidebar">
+    <a href="#">Home</a>
+    <a href="about.html">About</a>
+    <a href="main.html">Games</a>
+    <a href="Contact.html">Contact</a>
+    <a href="registration.html">Log Out</a>
+</div>
+
+<h1 style="color:red; text-align:center;"><b>WHAT TYPE OF GAME YOU ARE INTRESTED IN?</b></h1>
+<div class="align">
+<div class="link">
+<a href="Sports.html"><button>SPORTS</button></a><br><br>
+<a href="puzzle.html">
+<button> PUZZLE</button></a><br><br>
+<a href="Shooting.html">
+<button> SHOOTING</button></a><br><br>
+<a href="SimulationVedio.html">
+<button> SIMULATION VEDIO</button></a><br><br>
+<a href="Action%20and%20Adventure.html">
+<button> ACTION-ADVENTURE </button></a><br><br>
+<a href="Fighting.html">
+<button> FIGHTING </button></a><br><br>
+<a href="https://store.steampowered.com/category/rpg_mmo"> <button> MMO </button></a><br><br>
+<a href="https://www.gameloop.com/game/action/free-fire-on-pc">
+<button>FREE FIRE</button></a><br><br>
+
+
+</div>
+<div class ="link1">
+<a href="https://store.steampowered.com/agecheck/app/1593500/"><button>GOD OF WAR</button></a><br><br>
+<a href="Sandbox.html"><button>SANDBOX</button></a><br><br>
+<a href="Casual%20Games.html"><button>CASUAL GAMES</button></a><br><br>
+<a href="https://store.epicgames.com/en-US/c/stealth-games?sortBy=releaseDate&sortDir=DESC&count=40"><button>SHEALTH GAMES</button></a><br><br>
+<a href="https://discoelysium.com/"><button>DISCO ELYSIUM</button></a><br><br>
+<a href="https://store.steampowered.com/agecheck/app/782330/"><button>DOOM ETERNAL</button></a><br><br>
+<a href="https://store.steampowered.com/agecheck/app/782330/"><button>BULDAR'S GATE 3</button></a><br><br>
+
+</div>
+<div class ="link2">
+<a href="https://www.crazygames.com/t/horror"><button>HORROR</button></a><br><br>
+<a href="https://store.steampowered.com/category/strategy_real_time/"><button>REAL TIME STARTEGY</button></a><br><br>
+<a href="https://store.steampowered.com/app/205100/Dishonored/"><button>DISHONOURED GAMES</button></a><br><br>
+<a href="https://store.steampowered.com/category/rpg/"><button>RPG</button></a><br><br>
+<a href="https://store.steampowered.com/tags/en/Text-Based/"><button>TEXT BASED</button></a><br><br>
+<a href="https://store.steampowered.com/curator/44905723-Audiogames/"><button>AUDIO GAME</button></a><br><br>
+<a href="https://store.steampowered.com/agecheck/app/1962663/"><button>CALL OF DUTY: WARZONE</button></a><br><br>
+<a href="https://www.angrybirds.com/play/"><button>ANGRY BIRD</button></a><br><br>
+
+</div>
+</div>
+<script>
+function toggleSidebar() {
+    var sidebar = document.getElementById("sidebar");
+    var overlay = document.getElementById("overlay");
+    if (sidebar.classList.contains("open-sidebar")) {
+        sidebar.classList.remove("open-sidebar");
+        overlay.style.display = "none";
+    } else {
+        sidebar.classList.add("open-sidebar");
+        overlay.style.display = "block";
+    }
+}
+</script>
+</body>
+</html>

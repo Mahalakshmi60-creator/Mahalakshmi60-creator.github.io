@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Casual Games</title>
+<style>
+.container {
+            display: flex;
+            gap: 10px;
+            position: relative;
+        }
+
+ .game {
+            
+            transition: transform 0.3s ease, z-index 0s step-end;
+            position: relative;
+            z-index: 1;
+        }
+.game:hover {
+            transform: scale(1.5);
+            z-index: 10;
+        }
+
+#game1{
+  position: absolute;
+    top: 50px;
+    left: 350px;
+    width: 300px;
+}
+#game2{
+  position: absolute;
+    top: 400px;
+    left: 350px;
+    width: 300px;
+}
+#game3{
+  position: absolute;
+    top: 50px;
+    left: 800px;
+    width: 300px;
+}
+#game4{
+  position: absolute;
+    top: 400px;
+    left: 800px;
+    width: 300px;
+}
+</style>
+</head>
+<body style="background-image: url('cg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+<a href="https://www.crazygames.com/game/ragdoll-archers">
+    <img src="sd1.png" alt="Clickable Image" class="game" id="game1">
+</a>
+<p style="position: absolute;
+    top: 250px;
+    left: 370px;
+    font-size:20px;
+    color: red;">RAGDOLL ARCHERS</p>
+<a href="https://www.crazygames.com/game/roling-balls-sea-race">
+    <img src="cg2.png" alt="Clickable Image" class="game" id="game2">
+</a>
+<p style="position: absolute;
+    top: 600px;
+    left: 370px;
+    font-size:20px;
+    color: red;">ROLLING BALL SEA RACE</p>
+<a href="https://www.crazygames.com/game/havendock">
+    <img src="sd3.png" alt="Clickable Image" class="game" id="game3">
+</a>
+<p style="position: absolute;
+    top: 230px;
+    left: 870px;
+    font-size:20px;
+    color: red;">HAVENDOCK</p>
+<a href="https://www.crazygames.com/game/slash-the-rope">
+    <img src="sd4.png" alt="Clickable Image" class="game" id="game4">
+</a>
+<p style="position: absolute;
+    top: 590px;
+    left: 850px;
+    font-size:20px;
+    color: red;">SLASH THE ROPE</p>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkblue;
+        }
+        .switch {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .switch a {
+            color: blue;
+            text-decoration: none;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width:300px;
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body style="background-image: url('reg1.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signUpForm" action="file:///C:/Users/mkrjp/OneDrive/Desktop/GAMEHUB/main.html">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+                <div class="error" id="usernameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <div class="error" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <div class="error" id="passwordError"></div>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword">
+                <div class="error" id="confirmPasswordError"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+     <div class="switch">Already have an account? <a href="file:///C:/Users/mkrjp/OneDrive/Desktop/GAMEHUB/log.html">Log In</a></div>
+        
+         <div class="container" id="login" style="display: none;">
+            <h2>Log In</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+            </form>
+            <div class="switch">Don't have an account? <a href="#signup">Sign Up</a></div>
+
+    <script>
+        document.getElementById("signUpForm").addEventListener("submit", function(event) {
+            let valid = true;
+
+            // Username validation
+            const username = document.getElementById("username").value.trim();
+            if (username === "") {
+                document.getElementById("usernameError").innerText = "Username is required";
+                valid = false;
+            } else {
+                document.getElementById("usernameError").innerText = "";
+            }
+
+            // Email validation
+            const email = document.getElementById("email").value.trim();
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                document.getElementById("emailError").innerText = "Enter a valid email";
+                valid = false;
+            } else {
+                document.getElementById("emailError").innerText = "";
+            }
+
+            // Password validation
+            const password = document.getElementById("password").value.trim();
+            if (password.length < 6) {
+                document.getElementById("passwordError").innerText = "Password must be at least 6 characters";
+                valid = false;
+            } else {
+                document.getElementById("passwordError").innerText = "";
+            }
+
+            // Confirm Password validation
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
+            if (confirmPassword !== password) {
+                document.getElementById("confirmPasswordError").innerText = "Passwords do not match";
+                valid = false;
+            } else {
+                document.getElementById("confirmPasswordError").innerText = "";
+            }
+
+            if (!valid) {
+                event.preventDefault(); // Prevent form submission if validation fails
+            } else {
+                event.preventDefault(); // Stop actual form submission
+                alert("Sign-up successful! 🎉"); // Show popup message
+            }
+        });
+    </script>
+</body>
+</html>
