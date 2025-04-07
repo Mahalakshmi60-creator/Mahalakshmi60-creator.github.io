@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzle</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('pz.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      justify-items: center;
+    }
+
+    .game-card {
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.1);
+    }
+
+    .game-card img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+    }
+
+    .game-title {
+      margin-top: 10px;
+      font-size: 18px;
+      color: white;
+    }
+
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 50px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      .game-card img {
+        max-width: 90%;
+      }
+
+      .game-title {
+        font-size: 16px;
+      }
+
+      .back-button {
+        width: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/words-of-wonders">
+        <img src="pz1.png" alt="WORDS OF WONDER">
+      </a>
+      <p class="game-title">WORDS OF WONDER</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/ludo-king">
+        <img src="pz2.png" alt="LUDO KING">
+      </a>
+      <p class="game-title">LUDO KING</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/chess-free">
+        <img src="pz3.png" alt="CHESS">
+      </a>
+      <p class="game-title">CHESS</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/hidden-objects">
+        <img src="pz4.png" alt="HIDDEN OBJECTS">
+      </a>
+      <p class="game-title">HIDDEN OBJECTS</p>
+    </div>
+  </div>
+
+  <a href="javascript:history.back()">
+    <img src="bc.png" alt="Back" class="back-button">
+  </a>
+
+</body>
+</html>

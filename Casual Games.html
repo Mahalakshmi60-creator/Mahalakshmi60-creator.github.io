@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casual Games</title>
+  <style>
+    body {
+      background-image: url('cg.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 10px;
+        gap: 20px;
+      }
+
+    @media (max-width: 480px) {
+      .game-card {
+        max-width: 100%;
+      }
+
+    .game-card {
+      text-align: center;
+      max-width: 300px;
+      color: red;
+      transition: transform 0.3s ease, z-index 0s step-end;
+      position: relative;
+      z-index: 1;
+    }
+
+    .game-card:hover {
+      transform: scale(1.2);
+      z-index: 10;
+    }
+
+    .game-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .game-title {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .game-card {
+        max-width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .game-card {
+        max-width: 100%;
+      }
+
+      .game-title {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/ragdoll-archers">
+        <img src="sd1.png" alt="RAGDOLL ARCHERS">
+      </a>
+      <p class="game-title">RAGDOLL ARCHERS</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/roling-balls-sea-race">
+        <img src="cg2.png" alt="ROLLING BALL SEA RACE">
+      </a>
+      <p class="game-title">ROLLING BALL SEA RACE</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/havendock">
+        <img src="sd3.png" alt="HAVENDOCK">
+      </a>
+      <p class="game-title">HAVENDOCK</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/slash-the-rope">
+        <img src="sd4.png" alt="SLASH THE ROPE">
+      </a>
+      <p class="game-title">SLASH THE ROPE</p>
+    </div>
+  </div>
+
+</body>
+</html>

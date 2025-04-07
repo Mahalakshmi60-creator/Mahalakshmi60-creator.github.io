@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulation Videos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('sv.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      justify-items: center;
+    }
+
+    .game-card {
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.1);
+    }
+
+    .game-card img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+    }
+
+    .game-title {
+      margin-top: 10px;
+      font-size: 18px;
+      color: white;
+    }
+
+    @media (max-width: 480px) {
+      .game-card img {
+        max-width: 90%;
+      }
+
+      .game-title {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/racing-limits">
+        <img src="sv1.png" alt="RACING LIMITS">
+      </a>
+      <p class="game-title">RACING LIMITS</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/farm-merge-valley">
+        <img src="sv2.png" alt="FARM MERGE VALLEY">
+      </a>
+      <p class="game-title">FARM MERGE VALLEY</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/solar-smash">
+        <img src="sv3.png" alt="PLANET SMASH">
+      </a>
+      <p class="game-title">PLANET SMASH</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/cat-and-granny-original">
+        <img src="sv4.png" alt="CAT AND GRANNY">
+      </a>
+      <p class="game-title">CAT AND GRANNY</p>
+    </div>
+  </div>
+
+</body>
+</html>

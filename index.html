@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('mbg.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      overflow-x: hidden;
+    }
+
+    /* Sidebar toggle button */
+    .sidebar-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+      background: #ff4b2b;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1101;
+    }
+
+    /* Sidebar itself */
+    .sidebar {
+      width: 280px;
+      position: fixed;
+      top: 0;
+      left: -280px;
+      height: 100%;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      padding-top: 20px;
+      transition: left 0.3s ease;
+      z-index: 1100;
+      box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+
+    /* Dark overlay when sidebar is open */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 1099;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    h1 {
+      color: red;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .align {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .link, .link1, .link2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .link a button,
+    .link1 a button,
+    .link2 a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 80%;
+      }
+
+      .align {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sidebar-toggle {
+        top: 10px;
+        left: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sidebar toggle button -->
+<button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <a href="#">Home</a>
+  <a href="about.html">About</a>
+  <a href="main.html">Games</a>
+  <a href="Contact.html">Contact</a>
+  <a href="registration.html">Log Out</a>
+</div>
+
+<!-- Main heading -->
+<h1><b>WHAT TYPE OF GAME YOU ARE INTERESTED IN?</b></h1>
+
+<!-- Game category buttons -->
+<div class="align">
+  <div class="link">
+    <a href="Sports.html"><button>SPORTS</button></a>
+    <a href="puzzle.html"><button>PUZZLE</button></a>
+    <a href="Shooting.html"><button>SHOOTING</button></a>
+    <a href="SimulationVedio.html"><button>SIMULATION VIDEO</button></a>
+    <a href="Action%20and%20Adventure.html"><button>ACTION-ADVENTURE</button></a>
+    <a href="Fighting.html"><button>FIGHTING</button></a>
+    <a href="https://store.steampowered.com/category/rpg_mmo"><button>MMO</button></a>
+    <a href="https://www.gameloop.com/game/action/free-fire-on-pc"><button>FREE FIRE</button></a>
+  </div>
+  <div class="link1">
+    <a href="https://store.steampowered.com/agecheck/app/1593500/"><button>GOD OF WAR</button></a>
+    <a href="Sandbox.html"><button>SANDBOX</button></a>
+    <a href="Casual%20Games.html"><button>CASUAL GAMES</button></a>
+    <a href="https://store.epicgames.com/en-US/c/stealth-games"><button>STEALTH GAMES</button></a>
+    <a href="https://discoelysium.com/"><button>DISCO ELYSIUM</button></a>
+    <a href="https://store.steampowered.com/agecheck/app/782330/"><button>DOOM ETERNAL</button></a>
+    <a href="https://store.steampowered.com/agecheck/app/782330/"><button>BALDUR'S GATE 3</button></a>
+  </div>
+  <div class="link2">
+    <a href="https://www.crazygames.com/t/horror"><button>HORROR</button></a>
+    <a href="https://store.steampowered.com/category/strategy_real_time/"><button>REAL TIME STRATEGY</button></a>
+    <a href="https://store.steampowered.com/app/205100/Dishonored/"><button>DISHONORED</button></a>
+    <a href="https://store.steampowered.com/category/rpg/"><button>RPG</button></a>
+    <a href="https://store.steampowered.com/tags/en/Text-Based/"><button>TEXT BASED</button></a>
+    <a href="https://store.steampowered.com/curator/44905723-Audiogames/"><button>AUDIO GAME</button></a>
+    <a href="https://store.steampowered.com/agecheck/app/1962663/"><button>CALL OF DUTY: WARZONE</button></a>
+    <a href="https://www.angrybirds.com/play/"><button>ANGRY BIRD</button></a>
+  </div>
+</div>
+
+<!-- Sidebar JS -->
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    if (sidebar.classList.contains('open')) {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+      document.body.style.overflow = 'auto';
+    } else {
+      sidebar.classList.add('open');
+      overlay.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+</script>
+
+</body>
+</html>

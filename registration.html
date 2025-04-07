@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            background-image: url('reg1.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .switch {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .switch a {
+            color: blue;
+            text-decoration: none;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container" id="signup">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" id="name" placeholder="Username" required>
+                <span id="nameError" class="error"></span>
+
+                <input type="email" id="email" placeholder="Email" required>
+                <span id="emailError" class="error"></span>
+
+                <input type="password" id="password" placeholder="Password" required>
+                <span id="passwordError" class="error"></span>
+
+                <input type="password" id="confirmpassword" placeholder="Confirm Password" required>
+                <span id="confirmPasswordError" class="error"></span>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="switch">Already have an account? <a href="log.html">Log In</a></div>
+        </div>
+
+        <div class="container" id="login" style="display: none;">
+            <h2>Log In</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" id="navigate">Log In</button>
+            </form>
+            <div class="switch">Don't have an account? <a href="#signup">Sign Up</a></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            let isValid = true;
+            document.querySelectorAll('.error').forEach(el => el.textContent = "");
+
+            let username = document.getElementById('name').value.trim();
+            if (username === "") {
+                document.getElementById('nameError').textContent = "Username is required.";
+                isValid = false;
+            }
+
+            let email = document.getElementById('email').value.trim();
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (email === "") {
+                document.getElementById('emailError').textContent = "Email is required.";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = "Enter a valid email.";
+                isValid = false;
+            }
+
+            let password = document.getElementById('password').value.trim();
+            let passwordPattern = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+            if (password === "") {
+                document.getElementById('passwordError').textContent = "Password is required.";
+                isValid = false;
+            } else if (!passwordPattern.test(password)) {
+                document.getElementById('passwordError').textContent = "Password must be at least 8 characters, include one uppercase letter and one number.";
+                isValid = false;
+            }
+
+            let confirmPassword = document.getElementById('confirmpassword').value.trim();
+            if (confirmPassword === "") {
+                document.getElementById('confirmPasswordError').textContent = "Confirm Password is required.";
+                isValid = false;
+            } else if (confirmPassword !== password) {
+                document.getElementById('confirmPasswordError').textContent = "Passwords do not match.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Signed In successfully!");
+                setTimeout(function () {
+                    window.location.href = "index.html";
+                }, 100); // slight delay to ensure redirect works properly on mobile
+            }
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 100);
+        });
+    </script>
+</body>
+</html>

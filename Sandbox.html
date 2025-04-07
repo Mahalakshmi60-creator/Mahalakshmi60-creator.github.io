@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SandBox</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('sd.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: red;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      justify-items: center;
+    }
+
+    .game-card {
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.1);
+    }
+
+    .game-card img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+    }
+
+    .game-title {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 480px) {
+      .game-card img {
+        max-width: 90%;
+      }
+
+      .game-title {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/bloxdhop-io">
+        <img src="sd1.png" alt="BLOXDHOP-IO">
+      </a>
+      <p class="game-title">BLOXDHOP-IO</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/no-pain-no-gain---ragdoll-sandbox">
+        <img src="sd2.png" alt="NO PAIN NO GAIN">
+      </a>
+      <p class="game-title">NO PAIN NO GAIN</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/havendock">
+        <img src="sd3.png" alt="HAVENDOCK">
+      </a>
+      <p class="game-title">HAVENDOCK</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/slash-the-rope">
+        <img src="sd4.png" alt="SLASH THE ROPE">
+      </a>
+      <p class="game-title">SLASH THE ROPE</p>
+    </div>
+  </div>
+
+</body>
+</html>

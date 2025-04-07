@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sports</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('sp.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: red;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      justify-items: center;
+    }
+
+    .game-card {
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.1);
+    }
+
+    .game-card img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+    }
+
+    .game-title {
+      margin-top: 10px;
+      font-size: 18px;
+      color: red;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      .game-card img {
+        max-width: 90%;
+      }
+
+      .game-title {
+        font-size: 16px;
+      }
+
+      .back-button {
+        width: 35px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="javascript:history.back()">
+    <img src="bc.png" alt="Back" class="back-button">
+  </a>
+
+  <div class="container">
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/8-ball-billiards-classic">
+        <img src="sp1.png" alt="8 Ball Billiards">
+      </a>
+      <p class="game-title">8 BALL BILLIARDS CLASSIC</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/cricket-superstar-league">
+        <img src="sp2.png" alt="Cricket Superstar League">
+      </a>
+      <p class="game-title">CRICKET SUPERSTAR LEAGUE</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/tap-tap-shots">
+        <img src="sp3.png" alt="Basketball">
+      </a>
+      <p class="game-title">BASKETBALL</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/hill-climb-on-moto-bike">
+        <img src="sp4.png" alt="Moto Bike Climb">
+      </a>
+      <p class="game-title">HILL CLIMB ON MOTO BIKE</p>
+    </div>
+  </div>
+
+</body>
+</html>
+

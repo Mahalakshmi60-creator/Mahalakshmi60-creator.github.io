@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shooting Games</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('sh.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      justify-items: center;
+    }
+
+    .game-card {
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.1);
+    }
+
+    .game-card img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+    }
+
+    .game-title {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 480px) {
+      .game-card img {
+        max-width: 90%;
+      }
+
+      .game-title {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/hazmob-fps-online-shooter">
+        <img src="sh1.png" alt="HAZMOB">
+      </a>
+      <p class="game-title">HAZMOB</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/skillwarz">
+        <img src="sh2.png" alt="SKILLWARZ">
+      </a>
+      <p class="game-title">SKILLWARZ</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/bullet-force-multiplayer">
+        <img src="sh3.png" alt="BULLET FORCE">
+      </a>
+      <p class="game-title">BULLET FORCE</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/sniper-mission-blj">
+        <img src="sh4.png" alt="SNIPPER MISSION">
+      </a>
+      <p class="game-title">SNIPPER MISSION</p>
+    </div>
+  </div>
+
+</body>
+</html>

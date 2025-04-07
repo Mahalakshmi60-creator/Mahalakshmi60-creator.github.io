@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Action and Adventures Games</title>
+  <style>
+    body {
+      background-image: url('aa.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 20px;
+    }
+    
+
+    .game-card {
+      text-align: center;
+      color: white;
+      max-width: 250px;
+      transition: transform 0.3s ease, z-index 0s step-end;
+      position: relative;
+      z-index: 1;
+    }
+
+    .game-card:hover {
+      transform: scale(1.2);
+      z-index: 10;
+    }
+
+    .game-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .game-title {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+      @media (max-width: 480px) {
+      .container {
+        padding: 20px 10px;
+        gap: 20px;
+      }
+
+    @media (max-width: 480px) {
+      .game-card {
+        max-width: 100%;
+      }
+
+      .game-title {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/horror-tale-kidnapper">
+        <img src="aa1.png" alt="HORROR TALE">
+      </a>
+      <p class="game-title">HORROR TALE</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/911-prey">
+        <img src="aa2.png" alt="911 PREY">
+      </a>
+      <p class="game-title">911 PREY</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/daily-room-escape">
+        <img src="aa3.png" alt="DAILY ROOM ESCAPE">
+      </a>
+      <p class="game-title">DAILY ROOM ESCAPE</p>
+    </div>
+
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/paper-minecraft">
+        <img src="aa4.png" alt="PAPER MINECRAFT">
+      </a>
+      <p class="game-title">PAPER MINECRAFT</p>
+    </div>
+  </div>
+
+</body>
+</html>
